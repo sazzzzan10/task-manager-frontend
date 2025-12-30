@@ -2,11 +2,11 @@ import TaskItem from "./TaskItem";
 
 const filterList=[{
     title:"active",
-    value:true    
+    value:false    
 },
 {
     title:"completed",
-    value:false    
+    value:true    
 },
 {
     title:"all", 
