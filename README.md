@@ -1,16 +1,13 @@
-# React + Vite
+##  Live Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+You can view the live version of this project here:  
+ https://sazzzzan10.github.io/task-manager-frontend/
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Project Reflection
 
-## React Compiler
+The most challenging part of this project was managing state updates correctly and making sure tasks were saved and loaded reliably using `localStorage`, especially during page reloads. I am proud of the clean, mobile-first UI design and the way the app responds smoothly across different screen sizes while remaining accessible. If I were to continue this project, my next steps would be to add delete task feautre, a backend for user accounts and persistent storage, migrate the codebase to typeScript for better type safety, and improve testing and performance.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Live Screenshot
+![Live To-Do App Screenshot](./src/assets/screenshot.png)
