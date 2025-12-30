@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0.5rem;
   /* text-align: center; */
 }
 
@@ -45,4 +45,139 @@
   list-style-type: none; /* Removes the bullets/markers */
   padding: 0;            /* Removes default indentation */
   margin: 0;             /* Removes default margins */
+}
+
+/* Base reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background: #f7f7f7; */
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* --------------------
+   Task Input (Mobile First)
+-------------------- */
+.task-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.task-input button {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top:1rem;
+  background-color: #777777;
+}
+
+/* --------------------
+   Task List
+-------------------- */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;                /* Adequate touch target */
+  margin-bottom: 0.5rem;
+  background: white;
+  border-radius: 6px;
+}
+
+.task input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.task span {
+  font-size: 1rem;
+}
+
+/* --------------------
+   Filters (Mobile: stacked)
+-------------------- */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+
+/* --------------------
+   Hover & Focus (Accessibility)
+-------------------- */
+button:hover,
+button:focus {
+  background-color: #333333;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #6366f1;
+  outline-offset: 2px;
+}
+
+
+/* .filters button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+} */
+  .filters-button:hover{
+      outline: 3px solid #6366f1;
+
+  }
+/* --------------------
+   Tablet (≥768px)
+-------------------- */
+@media (min-width: 768px) {
+  .filters {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .task-input button{
+    margin-top:0;
+  }
+
+}
+
+/* --------------------
+   Desktop (≥1024px)
+-------------------- */
+@media (min-width: 1024px) {
+  .app {
+    max-width: 800px;
+  }
+
+  .task-input input {
+    font-size: 1.1rem;
+  }
+
+  .task {
+    padding: 1.25rem;
+  }
 }

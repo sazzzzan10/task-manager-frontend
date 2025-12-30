@@ -11,16 +11,16 @@ function App() {
   const stored = localStorage.getItem('tasks');
   return stored ? JSON.parse(stored) : [];
 })
+  const [selectedFilter, setSelectedFilter] = useState('');
+
 // useEffect(() => {
 //   const stored = localStorage.getItem('tasks');
 //   if (stored) setTasks(JSON.parse(stored));
 // }, []);
 useEffect(() => {
-  console.log("inside tasks useEffect", tasks)
 localStorage.setItem('tasks', JSON.stringify(tasks));
 }, [tasks]);
 const addTasksHandler =(newTask)=>{
-  console.log('inside onAdd, trying to set new task:', newTask)
   setTasks(prevState=>[...prevState,newTask])
 }
 
@@ -31,13 +31,15 @@ const onCompletedToggle=(id)=>{
         : task
     ))
 }
-
+const filterHandler=(filter)=>{
+  setSelectedFilter(filter);
+}
   return (
-    <div>
+    <div style={{"border":"2px solid gray", padding:12}}>
     <h3>Task Manager</h3>
       <TaskInput onAdd={addTasksHandler} prevId={tasks?.length>0?tasks[tasks.length-1].id:-1}/>
-      <TaskList task={tasks} onToggle={onCompletedToggle}/>
-      <FilterBar/>
+      <TaskList task={tasks} onToggle={onCompletedToggle} selectedFilter={selectedFilter}/>
+      <FilterBar filterHandler={filterHandler} selectedFilter={selectedFilter}/>
     </div>
   )
 }

@@ -8,12 +8,11 @@ export default function TaskInput({prevId,onAdd}) {
   };
     const addNewTask=(event)=>{
           event.preventDefault(); 
-          console.log('new task adding : ', prevId, newTask)
           onAdd({id:prevId+1, text:newTask, completed:false})
     } 
   return (
     // <div  style={{"border":"1px solid gray", "padding":8,"margin-bottom":12}}>
-    <div  style={{"padding":8,"margin-bottom":12}}>
+    <div   className="task-input" style={{"border":"1px solid gray","padding":8,"margin-bottom":12}}>
 
     <form onSubmit={addNewTask}>
       <label>
