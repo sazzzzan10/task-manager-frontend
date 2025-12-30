@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import TaskItem from "./TaskItem";
 
-export default function TaskList({task, onToggle, selectedFilter={title:"all"}}) {
+export default function TaskList({task, onToggle, selectedFilter={title:"all", value:true}}) {
     // const [visibleTasks, setVisibleTasks]=useState(task)
-    const visibleTasks= selectedFilter.title=="all"?task:task.filter((taskItem)=>taskItem.completed===selectedFilter.value)
+    const visibleTasks= selectedFilter.title=="all"?task:task.filter((taskItem)=>taskItem.completed==selectedFilter.value)
     // useEffect(()=>{
     //  const newList= selectedFilter.title=="all"?task:task.filter((taskItem)=>taskItem.completed==selectedFilter.value)
     //  setVisibleTasks(newList);

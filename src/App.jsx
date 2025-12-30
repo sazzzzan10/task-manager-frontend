@@ -11,7 +11,7 @@ function App() {
   const stored = localStorage.getItem('tasks');
   return stored ? JSON.parse(stored) : [];
 })
-  const [selectedFilter, setSelectedFilter] = useState('');
+  const [selectedFilter, setSelectedFilter] = useState({title:'all', value:true});
 
 // useEffect(() => {
 //   const stored = localStorage.getItem('tasks');
