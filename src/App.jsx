@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import TaskInput from './components/TaskInput'
 import TaskList from './components/TaskList'
+import FilterBar from './components/FilterBar'
 
 function App() {
   const [tasks, setTasks] = useState(() => {
@@ -36,6 +37,7 @@ const onCompletedToggle=(id)=>{
     <h3>Task Manager</h3>
       <TaskInput onAdd={addTasksHandler} prevId={tasks?.length>0?tasks[tasks.length-1].id:-1}/>
       <TaskList task={tasks} onToggle={onCompletedToggle}/>
+      <FilterBar/>
     </div>
   )
 }
