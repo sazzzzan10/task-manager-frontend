@@ -12,11 +12,11 @@ export default function TaskInput({prevId,onAdd}) {
     } 
   return (
     // <div  style={{"border":"1px solid gray", "padding":8,"margin-bottom":12}}>
-    <div   className="task-input" style={{"border":"1px solid gray","padding":8,"margin-bottom":12}}>
+    <div   className="task-input" style={{"border":"1px solid gray","padding":8,"marginBottom":12}}>
 
     <form onSubmit={addNewTask}>
       <label>
-        <input style={{"padding":8,"margin-right":12}} type="text" placeholder="Add new task..." onChange={handleChange} />
+        <input style={{"padding":8,"marginRight":12}} type="text" placeholder="Add new task..." onChange={handleChange} />
       </label>
       <button type="submit">Add Task</button>
     </form>
